@@ -7,3 +7,6 @@ def custom_function(a, b, c):
         return (a + b)
     else:
         return (a * b - c)
+
+
+magic_calculation.magic_calculation = magic_calculation
