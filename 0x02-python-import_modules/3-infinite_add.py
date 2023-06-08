@@ -1,7 +1,8 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 
 import sys
 
+total_sum = 0
 if __name__ == '__main__':
 
     for args in sys.argv[1:]:
