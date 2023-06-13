@@ -10,8 +10,8 @@
 
 int is_palindrome(listint_t **head)
 {
-	if (!head || !*head)
-		return (1);
+	/*if (!head || !*head)*/
+	/*	return (1);*/
 
 	listint_t *slow = *head;
 	listint_t *fast = *head;
