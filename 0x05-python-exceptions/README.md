@@ -1,8 +1,8 @@
 # 0x05-python-exceptions
 
-**This Topic is about Error Handling, in py we have Syntax Errors and Execution Errors, When a py interpreter meets a condition it can't execute, it raises an *exception* **
+**This Topic is about Error Handling, in py we have Syntax Errors and Execution Errors, When a py interpreter meets a condition it can't execute, it raises an *exception**
 
-**Below are some of the operations on *exception*
+##Below are some of the operations on **exception**
 
 [0-safe_print_list.py](0-safe_print_list.py) - prints x elements of a list
 [1-safe_print_integer.py](1-safe_print_integer.py) - prints an integer with "{:d}".format().
