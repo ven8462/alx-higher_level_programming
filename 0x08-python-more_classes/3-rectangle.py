@@ -59,7 +59,7 @@ class Rectangle:
         if self.width == 0 and self.height == 0:
             return ""
         else:
-            rectangle = ""  #initialize  the rectangle to empty
+            rectangle = ""
             for j in range(self.height):
                 for i in range(self.width):
                     rectangle += "#"
