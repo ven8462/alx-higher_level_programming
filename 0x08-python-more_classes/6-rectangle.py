@@ -16,6 +16,8 @@ class Rectangle:
         self.width = width
         self.height = height
 
+        Rectangle.number_of_instances += 1
+
     @property
     def width(self):
         """gets the width"""
@@ -65,7 +67,7 @@ class Rectangle:
             for j in range(self.height):
                 for i in range(self.width):
                     my_list += "#"
-                if (j < self.height - 1):
+                if (j != self.height - 1):
                     my_list += "\n"
             return (my_list)
 
