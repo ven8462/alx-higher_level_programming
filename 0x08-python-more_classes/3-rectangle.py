@@ -59,10 +59,10 @@ class Rectangle:
         if self.width == 0 and self.height == 0:
             return ""
         else:
-            rectangle = ""
+            my_list = ""
             for j in range(self.height):
                 for i in range(self.width):
-                    rectangle += "#"
-                if (j < self.height - 1):
-                    rectangle += "\n"
-            return (rectangle)
+                    my_list += "#"
+                if (j != self.height - 1):
+                    my_list += "\n"
+            return (my_list)
