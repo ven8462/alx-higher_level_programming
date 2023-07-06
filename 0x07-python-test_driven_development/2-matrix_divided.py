@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+""" a function that divides a matrix"""
 
 def matrix_divided(matrix, div):
+    """ the function"""
     if not isinstance(matrix, list) or \
        not all(isinstance(row, list) for row in matrix):
         msg = "matrix must be a matrix (list of lists) of integers/floats"
