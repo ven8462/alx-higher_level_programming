@@ -1,0 +1,34 @@
+"""
+This module is for testing the 1-my_list module.
+
+Importing the function from the module:
+  >>> MyList = __import__("1-my_list").MyList
+
+Module, class and method all have docstrings:
+  >>> assert len(__import__("1-my_list").__doc__)
+  >>> assert len(MyList.__doc__)
+  >>> assert len(MyList.print_sorted.__doc__)
+
+MyList should inherit from list:
+  >>> assert issubclass(MyList, list)
+
+Test print_sorted method with different lists:
+
+>>> l = MyList([4, 3, 2, 1])  # reversed order
+>>> l.print_sorted()
+[1, 2, 3, 4]
+
+>>> l = MyList([4, 3, 2, 1, -1, 5]) # includes negative
+>>> l.print_sorted()
+[-1, 1, 2, 3, 4, 5]
+
+>>> l = MyList([-10, -1, -7, -2, -8])  # all negative
+>>> l.print_sorted()
+[-10, -8, -7, -2, -1]
+
+Too many arguments should give TypeError:
+>>> l.print_sorted(1)
+Traceback (most recent call last):
+...
+TypeError: print_sorted() takes 1 positional argument but 2 were given
+"""
