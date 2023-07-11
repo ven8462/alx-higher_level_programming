@@ -10,6 +10,7 @@ is then printed with leading spaces to align the rows correctly.
 
 
 def pascal_triangle(n):
+    """ pascal's triangle"""
     # If n <= 0, return an empty list
     if n <= 0:
         return []
