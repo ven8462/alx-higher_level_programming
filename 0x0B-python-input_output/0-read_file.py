@@ -4,6 +4,6 @@
 
 def read_file(filename=""):
     """ Reads text froma file and prints to stdout"""
-    with open(filename) as file:
-        for line in file:
-            print(line.strip())
+    with open(filename, "r", encoding="utf-8") as file:
+        content = file.read()
+        print(content, end="")
