@@ -85,3 +85,24 @@ class Rectangle(Base):
     def __str__(self):
         """overides the __str__ method"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x , self.y, self.width, self.height)
+    
+    def update(self, *args, **kwargs):
+        """assigns argument to each attribute"""
+        up = ["id", "width", "height", "x", "y"]
+        if (args):
+            for i in range(len(args)):
+                setattr(self, up[i], args[i])
+
+        else:
+            for k in kwargs:
+                setattr(self, k, kwargs[k])
+
+    def to_dictionary(self):
+        """Returns dict representation of a Rectangle"""
+        return {
+            "x": self.x,
+            "y": self.__y,
+            "id": self.id,
+            "height": self.__height,
+            'width': self.__width,
+        }
