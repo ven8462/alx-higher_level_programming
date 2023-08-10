@@ -19,3 +19,15 @@ class TestRectangle(unittest.TestCase):
         Set up class method for the doc tests
         """
         cls.setup = inspect.getmembers(Rectangle, inspect.isfunction)
+
+    def setUp(self):
+        self.rec_one = Rectangle(1,1,1,1)
+
+    def test_create_instance(self):
+        print()
+        print(self.rec_one)
+        self.assertIsInstance(self.rec_one, Rectangle)
+
+    def test_float_width(self):
+        with self.assertRaises(TypeError):
+            Rectangle(1.12, 1, 1, 1)
