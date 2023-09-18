@@ -23,11 +23,10 @@ if __name__ == '__main__':
     # create custom session object class from database engine
     Session = sessionmaker(bind=engine)
     # create instance of new custom session class
-    my_session = sessionmaker(bind=engine)
-    session = my_session
+    session = Session()
 
-    for state, city in session.query(State, City).filter(
-            State.id == City.state_id).all():
-        print("{}: ({}) {}".format(state.name, city.id, city.name))
-
-    session.close()
+    results = session.query(State.name, City.id, City.name)\
+                     .join(City, City.state_id == State.id)\
+                     .order_by(City.id)
+    for result in results:
+        print("{}: ({}) {}".format(result[0], result[1], result[2]))
