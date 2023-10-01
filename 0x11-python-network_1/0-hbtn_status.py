@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Write a Python script that fetches
 https://alx-intranet.hbtn.io/status"""
 from urllib.request import urlopen
@@ -13,4 +14,3 @@ if __name__ == "__main__":
         print("\t- type: {}".format(type(response)))
         print("\t- content: {}".format(response))
         print("\t- utf8 content: {}".format(response.decode(encoding='utf-8')))
-
