@@ -2,10 +2,9 @@
 
 """Write a Python script that fetches
 https://alx-intranet.hbtn.io/status"""
-from urllib.request import urlopen
-
 
 from urllib import request
+
 
 if __name__ == "__main__":
     with request.urlopen("https://intranet.hbtn.io/status") as response:
